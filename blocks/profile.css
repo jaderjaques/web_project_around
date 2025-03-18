@@ -1,0 +1,182 @@
+.profile {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: auto;
+  grid-template-areas:
+  "photo div add";
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 880px;
+  margin: 40px auto 50px;
+  box-sizing: border-box;
+}
+
+.profile__photo {
+  grid-area: photo;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+}
+
+.profile__div {
+  grid-area: div;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2,auto);
+  grid-template-areas:
+  "name edit"
+  "job -";
+  margin: auto;
+  margin-left: 30px;
+  margin-right: 165px;
+  width: 415px;
+  height: 77px;
+}
+
+
+.profile__name {
+  grid-area: name;
+  width: max-content;
+  height: 39px;
+  margin: 0px;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  text-align: start;
+  color: #fff;
+}
+
+.profile__job {
+  grid-area: job;
+  max-width: 373px;
+  min-width: 373px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 5px;
+  text-align: start;
+  color: #fff;
+  margin: 16px auto 0px 0px;
+}
+
+.profile__edit-button {
+  grid-area: edit;
+  flex:1;
+  width: 24px;
+  height: 24px;
+  margin: 15px 0 auto 18px;
+  background-color: black;
+  border: 1px solid #fff;
+}
+
+.profile__edit-button:hover {
+  opacity: 60%;
+}
+
+.profile__add-button {
+  grid-area: add;
+  width: 150px;
+  height: 50px;
+  align-self: center;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.profile__add-button:hover {
+  opacity: 60%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+
+  .profile {
+    width: 767px;
+  }
+
+  .profile__div {
+    margin-right: 30px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .profile {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "photo"
+    "div"
+    "add";
+    align-items: center;
+    max-width: 282px;
+    height: 286px;
+    margin: 42px auto 0px;
+    box-sizing: border-box;
+  }
+
+  .profile__photo {
+    margin: 0 auto;
+  }
+
+  .profile__div {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas:
+    "name edit"
+    "job job";
+    justify-items: center;
+    flex-wrap: wrap;
+    margin: 30px auto 0px auto;
+    max-width: 224px;
+    min-width: 220px;
+    height: 50px;
+    gap:0;
+   }
+
+  .profile__name {
+    grid-area: name;
+    max-width: 224px;
+    min-width: 190px;
+    margin: 0px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: start;
+    color: #fff;
+    height: 22px;
+    }
+
+  .profile__edit-button {
+    grid-area: edit;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 4px;
+    padding: 0;
+   }
+
+
+  .profile__job {
+    grid-area: job;
+    max-width: 282px;
+    min-width: 150px;
+    margin: 14px auto 0px auto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 5px;
+    text-align: center;
+    color: #fff;
+   }
+
+  .profile__add-button {
+    margin: 36px 0px auto;
+    width: 282px;
+    height: 50px;
+    border: 1px solid #fff;
+   }
+
+}

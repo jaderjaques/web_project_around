@@ -1,0 +1,103 @@
+.grid-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto 0px;
+  max-width: 880px;
+}
+
+.grid-social {
+  display: grid;
+  grid-template-columns: repeat(3,282px);
+  grid-template-rows: repeat(2,auto);
+  max-width: 880px;
+  gap: 17px 20px;
+}
+
+.grid-social__card {
+  display: flex;
+  flex-direction: column;
+  width: 282px;
+  height: 361px;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.grid-social__div {
+  width: 246px;
+  height: 23px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-social__photo {
+  width: 282px;
+  height: 282px;
+  margin: 0;
+}
+
+.grid-social__title {
+  max-width: 222px;
+  width: 222px;
+  margin: 25px 2px 31px 21px;
+  font-family: "InterDisplay", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  text-align: start;
+  color: #000000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.grid-social__like-button {
+  margin: 27px 0px 33px 0px;
+  width: 21px;
+  height: 19px;
+  background-image: url(../images/like-vector.svg);
+  border: none;
+  padding: 0px;
+}
+
+.grid-social__like-button:active {
+  background-image: url(../images/like-active.png);
+}
+
+.grid-social__like-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+
+  .grid-social {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 581px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .grid-content {
+  margin: 36px auto 0px;
+  max-width: 282px;
+  }
+
+  .grid-social {
+    grid-template-columns: 282px;
+    grid-template-rows: repeat(6, auto);
+    max-width: 282px;
+    column-gap: 0px;
+    height: 2266px;
+   }
+
+}
