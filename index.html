@@ -7,60 +7,99 @@
     <meta name="author" content="Jader Jaques">
     <meta name="keywords" content="Social Media, Around the US, photos">
     <link rel="stylesheet" href="./pages/index.css">
+    <link rel="shortcut icon" href="./images/logo.png">
     <title>Around the U.S</title>
 </head>
 <body>
     <div class="page">
         <header class="header">
-            <div class="header__nav">
+            <div>
                 <img class="header__logo" src="./images/logo.png" alt="logotipo around the us">
             </div>
         </header>
         <main class="content">
             <section class="profile">
                 <img class="profile__photo" src="./images/jacques-cousteau.jpg" alt="foto de perfil de jacques cousteau">
-                <h1 class="profile__name">Jacques Cousteau</h1>
-                <h2 class="profile__job">Explorador</h2>
-                <button class="profile__button">+</button>
+                <div class="profile__div">
+                  <h1 class="profile__name">Jacques Cousteau</h1>
+                  <button onclick="openWindow ()" class="profile__edit-button"><img class="profile__edit-image" src="./images/edit-vector.png" alt="botão de edição"></button>
+                  <h2 class="profile__job">Explorador</h2>
+                </div>
+                <button class="profile__add-button"><img class="profile__add-image" src="./images/add-vector.png" alt="botão de adição"></button>
             </section>
-            <section class="grid-social">
-                <div class="grid-social__card">
-                    <img class="grid-social__photo" src="./images/vale-de-yosemite.jpeg" al="Foto do vale de Yosemite, rio com margens repletas de arvores e uma montanha no fundo">
-                    <h2 class="grid-social__title">Vale de Yosemite</h2>
-                    <img class="grid-social__vector" src="./images/like-vector.svg">
-                </div>
-                <div class="grid-social__card">
-                    <img class="grid-social__photo" src="./images/lago-louise.jpeg" al="Foto do lago louise, um lago de coloração azul claro e montanhas no fundo">
-                    <h2 class="grid-social__title">Lago Louise</h2>
-                    <img class="grid-social__vector" src="./images/like-vector.svg">
-                </div>
-                <div class="grid-social__card">
-                    <img class="grid-social__photo" src="./images/montanhas.jpeg" al="Foto de várias montanhas">
-                    <h2 class="grid-social__title">Montanhas Care...</h2>
-                    <img class="grid-social__vector" src="./images/like-vector.svg">
-                </div>
-                <div class="grid-social__card">
-                    <img class="grid-social__photo" src="./images/latemar.jpeg" al="Foto de montanhas cobertas por neve">
-                    <h2 class="grid-social__title">Latemar</h2>
-                    <img class="grid-social__vector" src="./images/like-vector.svg">
-                </div>
-                <div class="grid-social__card">
-                    <img class="grid-social__photo" src="./images/parque-nacional.jpeg" al="Foto de um parque nacional com um lago e montanhas com o topo coberto de neve">
-                    <h2 class="grid-social__title">Parque Nacional...</h2>
-                    <img class="grid-social__vector" src="./images/like-vector.svg">
-                </div>
-                <div class="grid-social__card">
-                    <img class="grid-social__photo" src="./images/lago-di-braies.jpeg" al="Foto do lago de Braies, 3 barcos simples em um lago, rodeado de montanhas">
-                    <h2 class="grid-social__title">Lago di Braies</h2>
-                    <img class="grid-social__vector" src="./images/like-vector.svg">
-                </div>
+            <section class="grid-content">
+              <div class="grid-social">
+                  <div class="grid-social__card">
+                      <img class="grid-social__photo" src="./images/vale-de-yosemite.jpeg" alt="Foto do vale de Yosemite, rio com margens repletas de arvores e uma montanha no fundo">
+                      <div class="grid-social__div">
+                        <h2 class="grid-social__title">Vale de Yosemite</h2>
+                        <button class="grid-social__like-button">
+                        </button>
+                      </div>
+                  </div>
+                  <div class="grid-social__card">
+                      <img class="grid-social__photo" src="./images/lago-louise.jpeg" alt="Foto do lago louise, um lago de coloração azul claro e montanhas no fundo">
+                      <div class="grid-social__div">
+                        <h2 class="grid-social__title">Lago Louise</h2>
+                        <button class="grid-social__like-button">
+                        </button>
+                        </div>
+                  </div>
+                  <div class="grid-social__card">
+                      <img class="grid-social__photo" src="./images/montanhas.jpeg" alt="Foto de várias montanhas">
+                      <div class="grid-social__div">
+                        <h2 class="grid-social__title">Montanhas Care...</h2>
+                        <button class="grid-social__like-button">
+                        </button>
+                      </div>
+                  </div>
+                  <div class="grid-social__card">
+                      <img class="grid-social__photo" src="./images/latemar.jpeg" alt="Foto de montanhas cobertas por neve">
+                      <div class="grid-social__div">
+                        <h2 class="grid-social__title">Latemar</h2>
+                        <button class="grid-social__like-button">
+                        </button>
+                      </div>
+                  </div>
+                  <div class="grid-social__card">
+                      <img class="grid-social__photo" src="./images/parque-nacional.jpeg" alt="Foto de um parque nacional com um lago e montanhas com o topo coberto de neve">
+                      <div class="grid-social__div">
+                        <h2 class="grid-social__title">Parque Nacional...</h2>
+                        <button class="grid-social__like-button">
+                        </button>
+                      </div>
+                  </div>
+                  <div class="grid-social__card">
+                      <img class="grid-social__photo" src="./images/lago-di-braies.jpeg" alt="Foto do lago de Braies, 3 barcos simples em um lago, rodeado de montanhas">
+                      <div class="grid-social__div">
+                        <h2 class="grid-social__title">Lago di Braies</h2>
+                        <button class="grid-social__like-button">
+                        </button>
+                      </div>
+                  </div>
+              </div>
             </section>
         </main>
         <footer class="footer">
-            <div class="footer__content">
+            <div class="footer__div">
                 <h3 class="footer__copyright">&copy; 2025 Around The U.S.</h3>
             </div>
         </footer>
+        <section class="popup">
+          <div class="popup__container">
+            <button onclick="closeWindow ()" class="popup__close-bt">
+              <img class ="popup__close-icon" src="./images/close-icon.png" alt="ícone de fechar">
+            </button>
+            <h3 class="popup__title">Editar perfil</h3>
+            <form class="popup__form">
+              <fieldset class="popup__fieldset">
+                <input class="popup__fieldset-input" type="text" placeholder="Nome" id="name">
+                <input class="popup__fieldset-input" type="text" placeholder="Trabalho" id="job">
+              </fieldset>
+              <button class="popup__save-bt" type="submit">Salvar</button>
+            </form>
+          </div>
+        </section>
     </div>
   <script src="./scripts/script.js"></script>
 </body>
