@@ -20,7 +20,6 @@ const form = document.querySelector(".popup__form");
 
 function profileSubmit(evt) {
   evt.preventDefault();
-  console.log("txt");
 
   let nameInput = document.querySelector("#name").value;
   let jobInput = document.querySelector("#job").value;
