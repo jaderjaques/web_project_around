@@ -6,39 +6,65 @@
   max-width: 880px;
 }
 
-.grid-social {
-  display: grid;
-  grid-template-columns: repeat(3,282px);
-  grid-template-rows: repeat(2,auto);
+.grid-social__container {
   max-width: 880px;
   gap: 17px 20px;
 }
 
+.grid-social {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px 18px;
+  padding: 0px;
+
+}
+
 .grid-social__card {
+  position: relative;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   width: 282px;
-  height: 361px;
+  min-height: 361px;
+  max-height: 361px;
   border-radius: 10px;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #fff;
 }
 
 .grid-social__div {
-  width: 246px;
-  height: 23px;
+  width: 282px;
+  min-height: 80px;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto;
   align-items: center;
   justify-content: center;
+  background-color: #fff;
 }
 
+.grid-social__trash-icon {
+  position: absolute;
+  z-index: 1;
+  top: 18px;
+  left: 249px;
+  width: 18px;
+  height: 19px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+
 .grid-social__photo {
+  object-fit: cover;
+  z-index: 0;
   width: 282px;
-  height: 282px;
+  min-height: 282px;
   margin: 0;
 }
 
@@ -66,7 +92,7 @@
   padding: 0px;
 }
 
-.grid-social__like-button:active {
+.grid-social__like-button_active {
   background-image: url(../images/like-active.png);
 }
 

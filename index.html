@@ -22,85 +22,72 @@
                 <img class="profile__photo" src="./images/jacques-cousteau.jpg" alt="foto de perfil de jacques cousteau">
                 <div class="profile__div">
                   <h1 class="profile__name">Jacques Cousteau</h1>
-                  <button onclick="openWindow ()" class="profile__edit-button"><img class="profile__edit-image" src="./images/edit-vector.png" alt="botão de edição"></button>
+                  <button class="profile__edit-button modal-btn" data-template="editPopup"><img class="profile__edit-image" src="./images/edit-vector.png" alt="botão de edição"></button>
                   <h2 class="profile__job">Explorador</h2>
                 </div>
-                <button class="profile__add-button"><img class="profile__add-image" src="./images/add-vector.png" alt="botão de adição"></button>
+                <button class="profile__add-button modal-btn" data-template="addPopup"><img class="profile__add-image" src="./images/add-vector.png" alt="botão de adição"></button>
             </section>
             <section class="grid-content">
-              <div class="grid-social">
-                  <div class="grid-social__card">
-                      <img class="grid-social__photo" src="./images/vale-de-yosemite.jpeg" alt="Foto do vale de Yosemite, rio com margens repletas de arvores e uma montanha no fundo">
-                      <div class="grid-social__div">
-                        <h2 class="grid-social__title">Vale de Yosemite</h2>
-                        <button class="grid-social__like-button">
-                        </button>
-                      </div>
+              <div class="grid-social__container">
+                <template class="grid-social__template">
+                  <img onclick="trashPhoto(event)" class="grid-social__trash-icon" src="./images/Trash.svg" alt="botão de lixeira">
+                  <img class="grid-social__photo" src="./images/vale-de-yosemite.jpeg" alt="Foto" name="">
+                  <div class="grid-social__div">
+                    <h2 class="grid-social__title">Vale de Yosemite</h2>
+                    <button class="grid-social__like-button"></button>
                   </div>
-                  <div class="grid-social__card">
-                      <img class="grid-social__photo" src="./images/lago-louise.jpeg" alt="Foto do lago louise, um lago de coloração azul claro e montanhas no fundo">
-                      <div class="grid-social__div">
-                        <h2 class="grid-social__title">Lago Louise</h2>
-                        <button class="grid-social__like-button">
-                        </button>
-                        </div>
-                  </div>
-                  <div class="grid-social__card">
-                      <img class="grid-social__photo" src="./images/montanhas.jpeg" alt="Foto de várias montanhas">
-                      <div class="grid-social__div">
-                        <h2 class="grid-social__title">Montanhas Care...</h2>
-                        <button class="grid-social__like-button">
-                        </button>
-                      </div>
-                  </div>
-                  <div class="grid-social__card">
-                      <img class="grid-social__photo" src="./images/latemar.jpeg" alt="Foto de montanhas cobertas por neve">
-                      <div class="grid-social__div">
-                        <h2 class="grid-social__title">Latemar</h2>
-                        <button class="grid-social__like-button">
-                        </button>
-                      </div>
-                  </div>
-                  <div class="grid-social__card">
-                      <img class="grid-social__photo" src="./images/parque-nacional.jpeg" alt="Foto de um parque nacional com um lago e montanhas com o topo coberto de neve">
-                      <div class="grid-social__div">
-                        <h2 class="grid-social__title">Parque Nacional...</h2>
-                        <button class="grid-social__like-button">
-                        </button>
-                      </div>
-                  </div>
-                  <div class="grid-social__card">
-                      <img class="grid-social__photo" src="./images/lago-di-braies.jpeg" alt="Foto do lago de Braies, 3 barcos simples em um lago, rodeado de montanhas">
-                      <div class="grid-social__div">
-                        <h2 class="grid-social__title">Lago di Braies</h2>
-                        <button class="grid-social__like-button">
-                        </button>
-                      </div>
-                  </div>
+                </template>
+                <ul class="grid-social"></ul>
               </div>
             </section>
-        </main>
-        <footer class="footer">
-            <div class="footer__div">
-                <h3 class="footer__copyright">&copy; 2025 Around The U.S.</h3>
+          </main>
+          <footer class="footer">
+              <div class="footer__div">
+                  <h3 class="footer__copyright">© 2025 Around The U.S.</h3>
+              </div>
+          </footer>
+          <template id="editPopup">
+            <div class="popup">
+              <div class="popup__container">
+                <button class="popup__close-bt"><img class="popup__close-icon" src="./images/close-icon.png" alt="ícone de fechar"></button>
+                <h3 class="popup__title">Editar perfil</h3>
+                <form class="popup__form" id="editForm">
+                  <fieldset class="popup__fieldset">
+                    <input class="popup__fieldset-input" type="text" placeholder="Nome" id="name">
+                    <input class="popup__fieldset-input" type="text" placeholder="Trabalho" id="job">
+                  </fieldset>
+                  <button class="popup__save-bt" type="submit">Salvar</button>
+                </form>
+              </div>
             </div>
-        </footer>
-        <section class="popup">
-          <div class="popup__container">
-            <button onclick="closeWindow ()" class="popup__close-bt">
-              <img class ="popup__close-icon" src="./images/close-icon.png" alt="ícone de fechar">
-            </button>
-            <h3 class="popup__title">Editar perfil</h3>
-            <form class="popup__form">
-              <fieldset class="popup__fieldset">
-                <input class="popup__fieldset-input" type="text" placeholder="Nome" id="name">
-                <input class="popup__fieldset-input" type="text" placeholder="Trabalho" id="job">
-              </fieldset>
-              <button class="popup__save-bt" type="submit">Salvar</button>
-            </form>
-          </div>
-        </section>
-    </div>
-  <script src="./scripts/index.js"></script>
-</body>
+          </template>
+          <template id="imgPopup">
+            <div class="imgpopup__div">
+              <div class="imgpopup__container">
+                <button class="imgpopup__close-bt">
+                  <img class="popup__close-icon" src="./images/close-icon.png" alt="ícone de fechar">
+                </button>
+                <img class="imgpopup__img" src="" alt="foto ampliada">
+                <h3 class="imgpopup__name">nome</h3>
+              </div>
+            </div>
+          </template>
+          <template id="addPopup">
+            <div class="popup">
+              <div class="popup__container">
+                <button class="popup__close-bt"><img class="popup__close-icon" src="./images/close-icon.png" alt="ícone de fechar"></button>
+                <h3 class="popup__title">Novo local</h3>
+                <form class="popup__form" id="addForm">
+                  <fieldset class="popup__fieldset">
+                    <input class="popup__fieldset-input" type="text" placeholder="Título" id="local">
+                    <input class="popup__fieldset-input" type="url" placeholder="Link de imagem" id="link">
+                  </fieldset>
+                  <button class="popup__save-bt" type="submit">Criar</button>
+                </form>
+              </div>
+            </div>
+          </template>
+      </div>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>

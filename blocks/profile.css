@@ -67,6 +67,7 @@
   margin: 15px 0 auto 18px;
   background-color: black;
   border: 1px solid #fff;
+  cursor: pointer;
 }
 
 .profile__edit-button:hover {
