@@ -46,7 +46,7 @@
 }
 
 .popup__title {
-  font-family: "InterDisplay", Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   max-width: 330px;
   margin: 34px auto auto 36px;
   font-weight: 900;
@@ -67,7 +67,7 @@
 }
 
 .popup__fieldset-input {
-  font-family: "InterDisplay", Arial, Helvetica, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   border: 0px;
   border-bottom: 1px solid #000;
   padding-bottom: 13px;

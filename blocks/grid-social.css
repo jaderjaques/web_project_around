@@ -1,7 +1,6 @@
 .grid__social {
   display: flex;
   margin: 50px auto 0px;
-  align-items: center;
 }
 
 
@@ -13,11 +12,13 @@
   gap: 20px 18px;
   padding: 0px;
   max-width: 880px;
+  margin: auto;
 }
 
 .grid-social__container {
   max-width: 880px;
   gap: 17px 20px;
+  margin: 0 auto;
 }
 
 .grid-social__card {
@@ -72,7 +73,6 @@
   max-width: 222px;
   width: 222px;
   margin: 25px 2px 31px 21px;
-  font-family: "InterDisplay", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
@@ -105,7 +105,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 900px) {
 
-  .grid-social {
+  .grid-social__list {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     width: 581px;
@@ -118,7 +118,7 @@
   max-width: 282px;
   }
 
-  .grid-social {
+  .grid-social__list {
     grid-template-columns: 282px;
     grid-template-rows: repeat(6, auto);
     max-width: 282px;
