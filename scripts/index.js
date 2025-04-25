@@ -150,7 +150,7 @@ function handleAddFormSubmit(evt, popup) {
   const form = evt.target;
   const titleInput = form.querySelector('#local').value;
   const linkInput = form.querySelector('#link').value;
-  const container = document.querySelector('.grid-social');
+  const container = document.querySelector('.grid-social__list');
   const newCard = createCard({ name: titleInput, link: linkInput });
   if (newCard) {
     container.prepend(newCard);
@@ -159,7 +159,7 @@ function handleAddFormSubmit(evt, popup) {
 
 // Inicialização
 document.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.grid-social');
+  const container = document.querySelector('.grid-social__list');
   initialCards.forEach(card => {
     const newCard = createCard(card);
     if (newCard) {

@@ -1,18 +1,23 @@
-.grid-social__container {
-  max-width: 880px;
-  gap: 17px 20px;
+.grid__social {
+  display: flex;
+  margin: 50px auto 0px;
+  align-items: center;
 }
 
-.grid-social {
+
+.grid-social__list {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px 18px;
   padding: 0px;
-  align-items: center;
-  margin: 50px auto 0px;
   max-width: 880px;
+}
+
+.grid-social__container {
+  max-width: 880px;
+  gap: 17px 20px;
 }
 
 .grid-social__card {
