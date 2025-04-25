@@ -28,6 +28,7 @@
 }
 
 .imgpopup__name {
+  font-family: "InterDisplay", Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 400;
   color: #fff;

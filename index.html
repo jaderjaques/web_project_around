@@ -11,7 +11,7 @@
     <title>Around the U.S</title>
 </head>
 <body>
-    <div class="page">
+    <div class="page">grid
         <header class="header">
             <div>
                 <img class="header__logo" src="./images/logo.png" alt="logotipo around the us">
@@ -27,7 +27,7 @@
                 </div>
                 <button class="profile__add-button modal-btn" data-template="addPopup"><img class="profile__add-image" src="./images/add-vector.png" alt="botão de adição"></button>
             </section>
-            <section class="grid-social">
+            <section>
               <div class="grid-social__container">
                 <template class="grid-social__template">
                   <img onclick="trashPhoto(event)" class="grid-social__trash-icon" src="./images/Trash.svg" alt="botão de lixeira">
@@ -53,8 +53,8 @@
                 <h3 class="popup__title">Editar perfil</h3>
                 <form class="popup__form" id="editForm">
                   <fieldset class="popup__fieldset">
-                    <input class="popup__fieldset-input" type="text" placeholder="Nome" id="name">
-                    <input class="popup__fieldset-input" type="text" placeholder="Trabalho" id="job">
+                    <input class="popup__fieldset-input" type="text" placeholder="Nome" id="name" required>
+                    <input class="popup__fieldset-input" type="text" placeholder="Trabalho" id="job" required>
                   </fieldset>
                   <button class="popup__save-bt" type="submit">Salvar</button>
                 </form>
@@ -79,8 +79,8 @@
                 <h3 class="popup__title">Novo local</h3>
                 <form class="popup__form" id="addForm">
                   <fieldset class="popup__fieldset">
-                    <input class="popup__fieldset-input" type="text" placeholder="Título" id="local">
-                    <input class="popup__fieldset-input" type="url" placeholder="Link de imagem" id="link">
+                    <input class="popup__fieldset-input" type="text" placeholder="Título" id="local" required>
+                    <input class="popup__fieldset-input" type="url" placeholder="Link de imagem" id="link" required>
                   </fieldset>
                   <button class="popup__save-bt" type="submit">Criar</button>
                 </form>
